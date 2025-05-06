@@ -23,7 +23,7 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 
 - Queried MIMIC-IV edstays, diagnoses_icd, patients, and admissions tables via BigQuery.
 
-- Filtered for asthma patients using ICD-9 codes starting with 493.
+- Filtered for asthma patients using ICD-9 codes starting with J45.
 
 - Merged patient-level features including demographics, diagnosis codes, and comorbidities (e.g., diabetes, COPD).
 
