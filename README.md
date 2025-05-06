@@ -121,6 +121,9 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 | **Risk Stratification**          | HEDIS improvement requires targeting high-risk patients            | Segments patients by ED use, LOS, and comorbidities to prioritize high-risk groups for outreach and intervention.                   |
 | **Actionable Metrics**           | Measures must be clear, monitorable, and linked to outcomes        | Defines `frequent_ed_user`, `ed_los_category`, and `comorbidity_count` for use in quality monitoring.                   |
 
+### Conclusion:
+
+This project successfully identifies frequent ED users among asthma patients, correlating ED utilization patterns with comorbidities and patient demographics. Interventions should include frequent follow-up after ED visits, management of comorbidities, and education on recognizing signs that lead to severe conditions. By implementing these strategies, healthcare providers can improve asthma management, reduce unnecessary ED visits, and enhance patient outcomes, particularly for high-risk groups
   
 #### 📚 References
 
