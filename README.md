@@ -1,6 +1,6 @@
 # 📊 HEDIS-Quality-Improvement-Asthma-ED-Utilization-Analysis
 
-**Data Source:** MIMIC-III Clinical Database obtained via Physionet using Bigquery 
+**Data Source:** MIMIC-IV-ED obtained via Physionet using Bigquery 
 
 **Project Summary:**
 This project utilizes MIMIC-IV emergency department (ED) data to analyze frequent ED visits among asthma patients, in alignment with the HEDIS measure EDU (ED Utilization for Asthma). The dataset consists of 19,223 records and 16 features, providing a detailed view of asthma-related ED utilization patterns. The primary focus is on developing patient risk stratification based on factors such as:
@@ -19,21 +19,28 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 
 ### Methodology
 
-#### 1. Data Extraction & Preprocessing
+#### 1. Data Preprocessing
+- Data Extraction: The study used the following MIMIC-IV tables:
 
-- Queried MIMIC-IV edstays, diagnoses_icd, patients, and admissions tables via BigQuery.
+- edstays: ED visit details, including length of stay (LOS).
 
-- Filtered for asthma patients using ICD-9 codes starting with J45.
+- diagnoses_icd: ICD-10-CM diagnosis codes.
 
-- Merged patient-level features including demographics, diagnosis codes, and comorbidities (e.g., diabetes, COPD).
+- patients: Demographic information.
+
+- admissions: Admission context for each stay.
+
+- Filtering for Asthma Patients: Asthma patients were identified using ICD-10-CM codes starting with J45.x.
+
+- Triage Data Integration: Triage metrics, such as acuity and chief complaint, were included to assess the severity of asthma exacerbations during ED visits.
 
 #### 2. Feature Engineering
 
-- Generated frequent_ed_user flag (≥4 ED visits per patient).
+- Frequent ED User Flag: Patients with ≥4 ED visits were flagged as frequent users.
 
-- Bucketed ed_los_hours into clinically relevant categories: <2h, 2-4h, 4-8h, 8-12h, >12h.
+- LOS Categories: ED LOS was categorized into different ranges based on ed_los_hours for temporal analysis.
 
-- Counted total ED visits and comorbidities for each patient.
+- Comorbidity Count: The total count of chronic conditions (diabetes, hypertension, COPD) was calculated based on ICD-10-CM codes.
 
 #### 3. Descriptive & Comparative Analysis
 
