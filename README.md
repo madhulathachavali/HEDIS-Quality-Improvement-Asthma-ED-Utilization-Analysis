@@ -70,7 +70,7 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 | **Comorbidity Distribution**        | 42% of patients had 2 or more comorbidities (e.g., diabetes, COPD).                      |            |
 | **Highest Burden Group**            | Patients staying 4–8 hours and frequent users had the highest comorbidity total (8,023). |
 
-<img width="559" alt="image" src="https://github.com/user-attachments/assets/e2d534a3-ecf9-44fe-9cb6-55e5aa53b16b" />
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/e2d534a3-ecf9-44fe-9cb6-55e5aa53b16b" />
 
 * **How this project improves HEDIS Measures**
 ### ✅ How This Project Supports HEDIS Improvement
@@ -80,9 +80,9 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 | **Identify Frequent ED Users**   | HEDIS EDU flags high ED use as a care quality issue                | Identifies patients with ≥4 ED visits to flag potentially preventable overuse of emergency care.                                               |
 | **Length of Stay (LOS) Insight** | Extended LOS may indicate poorly managed asthma or comorbid burden | Categorizes ED LOS; 46% of visits fall in the 4–8 hour range, helping to assess care delays and system burden.                                |
 | **Comorbidity Burden**           | HEDIS promotes managing comorbidities to prevent ED reliance       | Frequent ED users show high comorbidity counts (e.g., diabetes, COPD), highlighting the need for better chronic disease management.           |
-| **Disparity Analysis Potential** | HEDIS encourages equity in care delivery                           | Includes race and gender data to enable stratification and reveal disparities in asthma care and ED access.                                    |
-| **Risk Stratification**          | HEDIS improvement requires targeting high-risk patients            | Segments patients by ED use, LOS, and comorbidities to prioritize high-risk groups for proactive outreach and intervention.                   |
-| **Actionable Metrics**           | Measures must be clear, monitorable, and linked to outcomes        | Defines `frequent_ed_user`, `ed_los_category`, and `comorbidity_count` for use in dashboards and ongoing quality monitoring.                   |
+| **Disparity Analysis Potential** | HEDIS encourages equity in care delivery                           | Includes race and gender data to enable stratification.                                |
+| **Risk Stratification**          | HEDIS improvement requires targeting high-risk patients            | Segments patients by ED use, LOS, and comorbidities to prioritize high-risk groups for outreach and intervention.                   |
+| **Actionable Metrics**           | Measures must be clear, monitorable, and linked to outcomes        | Defines `frequent_ed_user`, `ed_los_category`, and `comorbidity_count` for use in quality monitoring.                   |
 
 
 
