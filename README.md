@@ -17,7 +17,43 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 * Summarize comorbidity burden and examine its relationship with ED utilization.
 * Provide insights into how ED LOS and acuity metrics correlate with patient risk levels.
 
-### Key Insights:
+### Methodology
+
+#### 1. Data Extraction & Preprocessing
+
+- Queried MIMIC-IV edstays, diagnoses_icd, patients, and admissions tables via BigQuery.
+
+- Filtered for asthma patients using ICD-9 codes starting with 493.
+
+- Merged patient-level features including demographics, diagnosis codes, and comorbidities (e.g., diabetes, COPD).
+
+#### 2. Feature Engineering
+
+- Generated frequent_ed_user flag (≥4 ED visits per patient).
+
+- Bucketed ed_los_hours into clinically relevant categories: <2h, 2-4h, 4-8h, 8-12h, >12h.
+
+- Counted total ED visits and comorbidities for each patient.
+
+#### 3. Descriptive & Comparative Analysis
+
+- Calculated prevalence of comorbidities across LOS categories and ED visit frequency.
+
+- Explored patient demographics (race, gender) to assess equity in ED usage.
+
+- Aggregated acuity scores and LOS by risk levels.
+
+#### 4. Visualization
+
+- Created bar charts, pie charts, and comparative plots using Python’s matplotlib and seaborn to highlight disparities and utilization patterns.
+
+- Constructed cross-tabulations to show the distribution of frequent ED use across LOS and comorbidity strata.
+
+#### 5. HEDIS Measure Alignment
+
+- Mapped findings to HEDIS EDU criteria, focusing on actionable insights for care quality improvement and population health management.
+
+### Results:
 
 * **Comorbidity Prevalence in Asthma ED Visits:**
 
@@ -84,8 +120,6 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 | **Disparity Analysis Potential** | HEDIS encourages equity in care delivery                           | Includes race and gender data to enable stratification.                                |
 | **Risk Stratification**          | HEDIS improvement requires targeting high-risk patients            | Segments patients by ED use, LOS, and comorbidities to prioritize high-risk groups for outreach and intervention.                   |
 | **Actionable Metrics**           | Measures must be clear, monitorable, and linked to outcomes        | Defines `frequent_ed_user`, `ed_los_category`, and `comorbidity_count` for use in quality monitoring.                   |
-
-
 
   
 #### 📚 References
