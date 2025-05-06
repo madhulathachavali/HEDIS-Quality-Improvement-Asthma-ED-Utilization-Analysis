@@ -11,12 +11,6 @@ This project utilizes MIMIC-IV emergency department (ED) data to analyze frequen
 
 - Total ED visits
 
-### Project Goals:
-
-* Stratify asthma patients by ED utilization risk and evaluate care disparities.
-* Summarize comorbidity burden and examine its relationship with ED utilization.
-* Provide insights into how ED LOS and acuity metrics correlate with patient risk levels.
-
 ### Methodology
 
 #### 1. Data Preprocessing
